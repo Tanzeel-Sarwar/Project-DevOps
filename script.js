@@ -60,20 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Newsletter Subscription
-    const newsletterForms = document.querySelectorAll('.newsletter-input');
-    newsletterForms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input').value;
-            if (email) {
-                console.log('Newsletter subscription:', email);
-                alert('Thank you for subscribing to our newsletter!');
-                this.querySelector('input').value = '';
-            }
-        });
-    });
-
     // Add scroll-based navbar background
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
